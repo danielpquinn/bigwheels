@@ -1,0 +1,58 @@
+<project>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <!-- model version - always 4.0.0 for Maven 2.x POMs -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- project coordinates - values which uniquely identify this project -->
+  <groupId>com.danielpquinn.bigwheels</groupId>
+  <artifactId>bigwheels</artifactId>
+  <version>1.0</version>
+
+  <!-- library dependencies -->
+  <dependencies>
+    <dependency>
+        <groupId>com.sparkjava</groupId>
+        <artifactId>spark-core</artifactId>
+        <version>2.5.4</version>
+    </dependency>
+    <dependency>
+        <groupId>com.j2html</groupId>
+        <artifactId>j2html</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20160810</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.21</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>Main</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
